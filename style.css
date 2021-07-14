@@ -5,46 +5,65 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 /* start header section */
-.container{
-    margin-bottom: 70px;
+
+.top-container{
+    height:677px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color:navy;
 }
-.top-banner{
+/* .top-banner{
     display:flex;
     width:100%;
     height:677px;
     background-color:navy;
+} */
+.top-banner{
+    justify-content: center;
+    align-items: center;
 }
-.half{
+/* .half{
     width:50%;
-}
-.half img{
+} */
+.top-banner img{
     Width:556px;
     Height:438px;
     margin-top:153px;
     padding-left:23px;
 }
+/* .half img{
+    Width:556px;
+    Height:438px;
+    margin-top:153px;
+    padding-left:23px;
+} */
 /* .top-style{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 } */
-.top-title h1{
+.top-title{
     width:485px;
     height:230px;
     color: #FFFFFF;
     padding-top:207px;
     padding-left: 156px;
+    padding-bottom:240p;
     font-size: 64px;
-    font-weight:bold;
+    font-weight:700;
     line-height: 80px;
 }
-.top-title a{
-    width: 168px;
-    height: 44px;
+.link{
+    width: 88px;
+    height: 24px;
     margin-left: 156px;
     background: #E02C6D;
     text-decoration: none;
     padding:10px 24px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
 }
 /* end header section  */
 
@@ -134,16 +153,46 @@ body{
 
 /* -----mobile device----- */
 
-@media only screen and (max-width:688px){
-    .top-banner{
-        width:100%;
-    }
-    .top-banner, .football-player, .last-style{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .top-banner,.football-player,.last-style{
+@media screen and (max-width:688px){
+    .top-container{
+        width: 360px;
+        height: 695px;
+        background: #2D25A0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
         flex-direction: column;
     }
+    .top-title{
+        width: 278px;
+        height: 138px;
+        font-size: 36px;
+        line-height: 50px;
+        color: #FFFFFF;
+        padding-left:16px;
+        font-weight: bold;
+    }
+    .link{
+        width: 168px;
+        height: 44px;
+        padding-left: 19px;
+        background: #E02C6D;
+    }
+    .top-banner{
+        width: 329px;
+        height: 259px;
+    }
 }
-
 /* -----tab device----- */
+
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .top-container{
+        width:50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+     .football-player, .last-style{
+        grid-template-columns:repeat(2, 1fr)
+    }
+}
